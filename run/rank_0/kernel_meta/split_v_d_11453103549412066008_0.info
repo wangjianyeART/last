@@ -1,0 +1,400 @@
+{
+    "job_content": {
+        "SocInfo": {
+            "autoTilingMode": "NO_TUNE",
+            "coreNum": "",
+            "coreType": "AiCore",
+            "deviceId": "0",
+            "l1Fusion": "false",
+            "l2Fusion": "false",
+            "l2Mode": "2",
+            "mdl_bank_path": "",
+            "offlineTune": false,
+            "op_bank_path": "",
+            "op_bank_update": false,
+            "op_debug_dir": "./rank_0/",
+            "op_debug_level": "3",
+            "op_impl_mode": "",
+            "op_impl_mode_list": [],
+            "socVersion": "Ascend910A",
+            "vector_fp_ceiling": ""
+        },
+        "full_name": "Default/SplitV-op4744",
+        "fusion_op_name": "split_v_d_11453103549412066008_0",
+        "graph_name": "",
+        "l1_size": -1,
+        "op_list": [
+            {
+                "name": "input_x_0",
+                "output_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "FRACTAL_NZ",
+                        "name": "input_x_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            1,
+                            20,
+                            960
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                60,
+                                60
+                            ],
+                            [
+                                2,
+                                2
+                            ],
+                            [
+                                16,
+                                16
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            1,
+                            60,
+                            2,
+                            16,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "type": "Data"
+            },
+            {
+                "attr_desc": [
+                    [
+                        640,
+                        320
+                    ],
+                    2,
+                    2
+                ],
+                "attrs": [
+                    {
+                        "dtype": "list_int32",
+                        "name": "size_splits",
+                        "valid": true,
+                        "value": [
+                            640,
+                            320
+                        ]
+                    },
+                    {
+                        "dtype": "int32",
+                        "name": "split_dim",
+                        "valid": true,
+                        "value": 2
+                    },
+                    {
+                        "dtype": "int32",
+                        "name": "num_split",
+                        "valid": true,
+                        "value": 2
+                    }
+                ],
+                "build_type": "accurately_build",
+                "dynamic_compile_static": false,
+                "func_name": "split_v_d",
+                "input_desc": [
+                    {
+                        "L1_addr_offset": 0,
+                        "L1_fusion_type": -1,
+                        "L1_workspace_size": -1,
+                        "addr_type": 0,
+                        "data_type": "float32",
+                        "dtype": "float32",
+                        "format": "FRACTAL_NZ",
+                        "name": "input_x_0",
+                        "ori_format": "NCHW",
+                        "ori_shape": [
+                            1,
+                            20,
+                            960
+                        ],
+                        "param_type": "required",
+                        "range": [
+                            [
+                                1,
+                                1
+                            ],
+                            [
+                                60,
+                                60
+                            ],
+                            [
+                                2,
+                                2
+                            ],
+                            [
+                                16,
+                                16
+                            ],
+                            [
+                                16,
+                                16
+                            ]
+                        ],
+                        "shape": [
+                            1,
+                            60,
+                            2,
+                            16,
+                            16
+                        ],
+                        "slice_offset": [],
+                        "split_index": 0,
+                        "total_shape": [],
+                        "valid": true,
+                        "valid_shape": []
+                    }
+                ],
+                "int64mode": false,
+                "max_kernel_id": 10,
+                "miss_support_info": "",
+                "module_name": "impl.split_v_d",
+                "name": "Default/SplitV-op4744",
+                "op_name": "split_v_d_11453103549412066008_0",
+                "ori_name": [
+                    "Default/SplitV-op4744"
+                ],
+                "output_data_desc": [
+                    [
+                        {
+                            "L1_addr_offset": 0,
+                            "L1_fusion_type": -1,
+                            "L1_workspace_size": -1,
+                            "addr_type": 0,
+                            "data_type": "float32",
+                            "dtype": "float32",
+                            "format": "FRACTAL_NZ",
+                            "ori_format": "NCHW",
+                            "ori_shape": [
+                                1,
+                                20,
+                                640
+                            ],
+                            "param_type": "dynamic",
+                            "range": [
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    40,
+                                    40
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    16,
+                                    16
+                                ],
+                                [
+                                    16,
+                                    16
+                                ]
+                            ],
+                            "shape": [
+                                1,
+                                40,
+                                2,
+                                16,
+                                16
+                            ],
+                            "slice_offset": [],
+                            "split_index": 0,
+                            "total_shape": [],
+                            "valid_shape": []
+                        },
+                        {
+                            "L1_addr_offset": 0,
+                            "L1_fusion_type": -1,
+                            "L1_workspace_size": -1,
+                            "addr_type": 0,
+                            "data_type": "float32",
+                            "dtype": "float32",
+                            "format": "FRACTAL_NZ",
+                            "ori_format": "NCHW",
+                            "ori_shape": [
+                                1,
+                                20,
+                                320
+                            ],
+                            "param_type": "dynamic",
+                            "range": [
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    20,
+                                    20
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    16,
+                                    16
+                                ],
+                                [
+                                    16,
+                                    16
+                                ]
+                            ],
+                            "shape": [
+                                1,
+                                20,
+                                2,
+                                16,
+                                16
+                            ],
+                            "slice_offset": [],
+                            "split_index": 0,
+                            "total_shape": [],
+                            "valid_shape": []
+                        }
+                    ]
+                ],
+                "output_desc": [
+                    [
+                        {
+                            "L1_addr_offset": 0,
+                            "L1_fusion_type": -1,
+                            "L1_workspace_size": -1,
+                            "addr_type": 0,
+                            "data_type": "float32",
+                            "dtype": "float32",
+                            "format": "FRACTAL_NZ",
+                            "name": "output",
+                            "ori_format": "NCHW",
+                            "ori_shape": [
+                                1,
+                                20,
+                                640
+                            ],
+                            "param_type": "dynamic",
+                            "range": [
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    40,
+                                    40
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    16,
+                                    16
+                                ],
+                                [
+                                    16,
+                                    16
+                                ]
+                            ],
+                            "shape": [
+                                1,
+                                40,
+                                2,
+                                16,
+                                16
+                            ],
+                            "slice_offset": [],
+                            "split_index": 0,
+                            "total_shape": [],
+                            "valid": true,
+                            "valid_shape": []
+                        },
+                        {
+                            "L1_addr_offset": 0,
+                            "L1_fusion_type": -1,
+                            "L1_workspace_size": -1,
+                            "addr_type": 0,
+                            "data_type": "float32",
+                            "dtype": "float32",
+                            "format": "FRACTAL_NZ",
+                            "name": "output",
+                            "ori_format": "NCHW",
+                            "ori_shape": [
+                                1,
+                                20,
+                                320
+                            ],
+                            "param_type": "dynamic",
+                            "range": [
+                                [
+                                    1,
+                                    1
+                                ],
+                                [
+                                    20,
+                                    20
+                                ],
+                                [
+                                    2,
+                                    2
+                                ],
+                                [
+                                    16,
+                                    16
+                                ],
+                                [
+                                    16,
+                                    16
+                                ]
+                            ],
+                            "shape": [
+                                1,
+                                20,
+                                2,
+                                16,
+                                16
+                            ],
+                            "slice_offset": [],
+                            "split_index": 0,
+                            "total_shape": [],
+                            "valid": true,
+                            "valid_shape": []
+                        }
+                    ]
+                ],
+                "pattern": "Opaque",
+                "py_module_path": "/usr/local/Ascend/opp/op_impl/built-in/ai_core/tbe",
+                "type": "SplitV",
+                "unknown_shape": false
+            }
+        ],
+        "scope_id": -1
+    },
+    "job_id": 19511,
+    "job_type": "Compile",
+    "source_id": 0
+}

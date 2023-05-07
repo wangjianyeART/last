@@ -1,0 +1,17 @@
+{
+    "binFileName":"strided_slice_grad_15542299396120538680_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"strided_slice_grad_15542299396120538680_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":224,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "sha256":"0630e00b6a0733b5f414e54ae88ed451b8bc69237b5b5e81ff8df059c712a965"
+}

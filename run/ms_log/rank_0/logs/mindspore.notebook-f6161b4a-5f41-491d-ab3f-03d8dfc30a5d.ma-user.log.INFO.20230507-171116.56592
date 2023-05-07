@@ -1,0 +1,5 @@
+Log file created at: 2023/05/07 17:11:16
+Running on machine: notebook-f6161b4a-5f41-491d-ab3f-03d8dfc30a5d
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+[CRITICAL] CORE(56592,ffff9a98a780,python):2023-05-07-17:11:16.285.629 [build/mindspore/merge/mindspore/core/ops_merge.cc:19895] LayerNormInfer] For 'LayerNorm', Gamma or beta shape should match input shape, but got input shape: (78, 20, 25), gamma shape: (320), beta shape: (320)
+[WARNING] MD(56592,ffff9a98a780,python):2023-05-07-17:11:16.487.925 [mindspore/ccsrc/minddata/dataset/engine/datasetops/device_queue_op.cc:73] ~DeviceQueueOp] preprocess_batch: 0; batch_queue: 0; push_start_time: ; push_end_time: .

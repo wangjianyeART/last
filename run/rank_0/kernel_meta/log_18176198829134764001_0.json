@@ -1,0 +1,15 @@
+{
+    "KBHit":false,
+    "batchBindOnly":1,
+    "binFileName":"log_18176198829134764001_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"log_18176198829134764001_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0
+    ],
+    "sha256":"28eb63d8a34f7c13fe4186ec60eef3ddac525bb26033879f2ff44aa5ca49990a"
+}

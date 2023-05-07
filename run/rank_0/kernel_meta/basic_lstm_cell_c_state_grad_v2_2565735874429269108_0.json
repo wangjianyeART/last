@@ -1,0 +1,22 @@
+{
+    "binFileName":"basic_lstm_cell_c_state_grad_v2_2565735874429269108_0",
+    "binFileSuffix":".o",
+    "blockDim":32,
+    "kernelName":"basic_lstm_cell_c_state_grad_v2_2565735874429269108_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"f3b2dd071fa64539f634f7e2491bf1370d07ad99583ee63db6d41e32e1a6589d"
+}

@@ -1,0 +1,15 @@
+{
+    "KBHit":false,
+    "binFileName":"te_fusion_batch_matmul_reduce_sum_d_6192297077713194303_0",
+    "binFileSuffix":".o",
+    "blockDim":78,
+    "kernelName":"te_fusion_batch_matmul_reduce_sum_d_6192297077713194303_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        1
+    ],
+    "sha256":"f05d9eb0c99f983d156b5cf1283493c0ccae44c754b64fa97ff4e345049b4585"
+}

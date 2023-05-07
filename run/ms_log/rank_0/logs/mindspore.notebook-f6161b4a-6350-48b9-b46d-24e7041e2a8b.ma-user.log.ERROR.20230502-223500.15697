@@ -1,0 +1,4 @@
+Log file created at: 2023/05/02 22:35:00
+Running on machine: notebook-f6161b4a-6350-48b9-b46d-24e7041e2a8b
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+[CRITICAL] DEVICE(15697,ffff8f349780,python):2023-05-02-22:35:00.872.101 [mindspore/ccsrc/runtime/device/context_extends.cc:97] OpenTsd] Device 1 call rtSetDevice failed, ret[107001]

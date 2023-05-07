@@ -1,0 +1,577 @@
+Please check the above information for the configurations
+
+train.py config: 
+ {'AdamWeightDecay': {'beta1': 0.9,
+ 'beta2': 0.99,
+ 'decay_filter': ['layernorm', 'bias'],
+ 'end_learning_rate': 1e-10,
+ 'eps': 1e-06,
+ 'learning_rate': 0.002,
+ 'power': 1.0,
+ 'warmup_steps': 1000,
+ 'weight_decay': 1e-05},
+ 'batch_size': 20,
+ 'bidirectional': True,
+ 'build_data': False,
+ 'checkpoint_file': './checkpoint/lstm_crf.ckpt',
+ 'checkpoint_path': './checkpoint/',
+ 'checkpoint_url': '',
+ 'ckpt_file': './ckpt_lstm/lstm_crf.ckpt',
+ 'ckpt_path': 'lstm_crf-15_446.ckpt',
+ 'ckpt_save_path': '../ckpt_lstm_crf',
+ 'config_path': '/home/ma-user/work/models/research/nlp/lstm_crf/scripts/../default_config.yaml',
+ 'data_CoNLL_path': '../data/CoNLL2000',
+ 'data_path': './data',
+ 'data_url': '',
+ 'device_id': 1,
+ 'device_num': 1,
+ 'device_target': 'CPU',
+ 'dropout': 0.5,
+ 'embed_size': 300,
+ 'enable_graph_kernel': 'true',
+ 'enable_modelarts': False,
+ 'enable_profiling': False,
+ 'file_format': 'MINDIR',
+ 'file_name': 'lstm_crf',
+ 'glove_path': '../data/glove',
+ 'keep_checkpoint_max': 20,
+ 'label_dir': '',
+ 'load_path': './output/checkpoint_path',
+ 'num_epochs': 20,
+ 'num_hiddens': 320,
+ 'num_layers': 2,
+ 'optimizer': 'AdamWeightDecay',
+ 'output_path': './output/train',
+ 'pre_trained': '',
+ 'preprocess': 'true',
+ 'preprocess_path': './preprocess',
+ 'result_dir': './result_Files',
+ 'result_path': './preprocess_Result/',
+ 'train_url': ''}
+segs: ['train']
+load.... ../data/CoNLL2000/train.txt data
+============== Starting Training ==============
+segs: ['test']
+load.... ../data/CoNLL2000/test.txt data
+epoch: 0, current epoch percent: 0.002, step: 1, loss is 324.18906
+epoch: 0, current epoch percent: 0.004, step: 2, loss is 324.86542
+epoch: 0, current epoch percent: 0.007, step: 3, loss is 323.9203
+epoch: 0, current epoch percent: 0.009, step: 4, loss is 321.88486
+epoch: 0, current epoch percent: 0.011, step: 5, loss is 324.19708
+epoch: 0, current epoch percent: 0.013, step: 6, loss is 321.12085
+epoch: 0, current epoch percent: 0.016, step: 7, loss is 319.2527
+epoch: 0, current epoch percent: 0.018, step: 8, loss is 316.80365
+epoch: 0, current epoch percent: 0.020, step: 9, loss is 311.63507
+epoch: 0, current epoch percent: 0.022, step: 10, loss is 304.4724
+epoch: 0, current epoch percent: 0.025, step: 11, loss is 292.5974
+epoch: 0, current epoch percent: 0.027, step: 12, loss is 269.5316
+epoch: 0, current epoch percent: 0.029, step: 13, loss is 214.09904
+epoch: 0, current epoch percent: 0.031, step: 14, loss is 147.13899
+epoch: 0, current epoch percent: 0.034, step: 15, loss is 90.416565
+epoch: 0, current epoch percent: 0.036, step: 16, loss is 92.60712
+epoch: 0, current epoch percent: 0.038, step: 17, loss is 80.3808
+epoch: 0, current epoch percent: 0.040, step: 18, loss is 67.55574
+epoch: 0, current epoch percent: 0.043, step: 19, loss is 85.58282
+epoch: 0, current epoch percent: 0.045, step: 20, loss is 64.6657
+epoch: 0, current epoch percent: 0.047, step: 21, loss is 92.64732
+epoch: 0, current epoch percent: 0.049, step: 22, loss is 70.9272
+epoch: 0, current epoch percent: 0.052, step: 23, loss is 65.59092
+epoch: 0, current epoch percent: 0.054, step: 24, loss is 67.92958
+epoch: 0, current epoch percent: 0.056, step: 25, loss is 61.916077
+epoch: 0, current epoch percent: 0.058, step: 26, loss is 56.395058
+epoch: 0, current epoch percent: 0.061, step: 27, loss is 59.20885
+epoch: 0, current epoch percent: 0.063, step: 28, loss is 51.86906
+epoch: 0, current epoch percent: 0.065, step: 29, loss is 53.777332
+epoch: 0, current epoch percent: 0.067, step: 30, loss is 54.577087
+epoch: 0, current epoch percent: 0.070, step: 31, loss is 55.404366
+epoch: 0, current epoch percent: 0.072, step: 32, loss is 55.08327
+epoch: 0, current epoch percent: 0.074, step: 33, loss is 50.0438
+epoch: 0, current epoch percent: 0.076, step: 34, loss is 52.03176
+epoch: 0, current epoch percent: 0.078, step: 35, loss is 50.8048
+epoch: 0, current epoch percent: 0.081, step: 36, loss is 60.830383
+epoch: 0, current epoch percent: 0.083, step: 37, loss is 49.302116
+epoch: 0, current epoch percent: 0.085, step: 38, loss is 53.264397
+epoch: 0, current epoch percent: 0.087, step: 39, loss is 65.66371
+epoch: 0, current epoch percent: 0.090, step: 40, loss is 33.020576
+epoch: 0, current epoch percent: 0.092, step: 41, loss is 48.159073
+epoch: 0, current epoch percent: 0.094, step: 42, loss is 55.71995
+epoch: 0, current epoch percent: 0.096, step: 43, loss is 40.35698
+epoch: 0, current epoch percent: 0.099, step: 44, loss is 48.48139
+epoch: 0, current epoch percent: 0.101, step: 45, loss is 41.671303
+epoch: 0, current epoch percent: 0.103, step: 46, loss is 42.727608
+epoch: 0, current epoch percent: 0.105, step: 47, loss is 36.139347
+epoch: 0, current epoch percent: 0.108, step: 48, loss is 44.012196
+epoch: 0, current epoch percent: 0.110, step: 49, loss is 42.153713
+epoch: 0, current epoch percent: 0.112, step: 50, loss is 46.328846
+epoch: 0, current epoch percent: 0.114, step: 51, loss is 41.319786
+epoch: 0, current epoch percent: 0.117, step: 52, loss is 40.169106
+epoch: 0, current epoch percent: 0.119, step: 53, loss is 32.21505
+epoch: 0, current epoch percent: 0.121, step: 54, loss is 36.626842
+epoch: 0, current epoch percent: 0.123, step: 55, loss is 38.606728
+epoch: 0, current epoch percent: 0.126, step: 56, loss is 30.944302
+epoch: 0, current epoch percent: 0.128, step: 57, loss is 36.61754
+epoch: 0, current epoch percent: 0.130, step: 58, loss is 28.978872
+epoch: 0, current epoch percent: 0.132, step: 59, loss is 32.67527
+epoch: 0, current epoch percent: 0.135, step: 60, loss is 26.198471
+epoch: 0, current epoch percent: 0.137, step: 61, loss is 28.804081
+epoch: 0, current epoch percent: 0.139, step: 62, loss is 32.325397
+epoch: 0, current epoch percent: 0.141, step: 63, loss is 24.950064
+epoch: 0, current epoch percent: 0.143, step: 64, loss is 25.750946
+epoch: 0, current epoch percent: 0.146, step: 65, loss is 26.01315
+epoch: 0, current epoch percent: 0.148, step: 66, loss is 30.618216
+epoch: 0, current epoch percent: 0.150, step: 67, loss is 22.362976
+epoch: 0, current epoch percent: 0.152, step: 68, loss is 18.79916
+epoch: 0, current epoch percent: 0.155, step: 69, loss is 24.069424
+epoch: 0, current epoch percent: 0.157, step: 70, loss is 27.591782
+epoch: 0, current epoch percent: 0.159, step: 71, loss is 20.509304
+epoch: 0, current epoch percent: 0.161, step: 72, loss is 17.11586
+epoch: 0, current epoch percent: 0.164, step: 73, loss is 22.422876
+epoch: 0, current epoch percent: 0.166, step: 74, loss is 19.170675
+epoch: 0, current epoch percent: 0.168, step: 75, loss is 25.71489
+epoch: 0, current epoch percent: 0.170, step: 76, loss is 24.17275
+epoch: 0, current epoch percent: 0.173, step: 77, loss is 22.486908
+epoch: 0, current epoch percent: 0.175, step: 78, loss is 25.594135
+epoch: 0, current epoch percent: 0.177, step: 79, loss is 16.18274
+epoch: 0, current epoch percent: 0.179, step: 80, loss is 16.045078
+epoch: 0, current epoch percent: 0.182, step: 81, loss is 19.055695
+epoch: 0, current epoch percent: 0.184, step: 82, loss is 16.954554
+epoch: 0, current epoch percent: 0.186, step: 83, loss is 19.722828
+epoch: 0, current epoch percent: 0.188, step: 84, loss is 20.52988
+epoch: 0, current epoch percent: 0.191, step: 85, loss is 14.247198
+epoch: 0, current epoch percent: 0.193, step: 86, loss is 10.767084
+epoch: 0, current epoch percent: 0.195, step: 87, loss is 18.215387
+epoch: 0, current epoch percent: 0.197, step: 88, loss is 17.131186
+epoch: 0, current epoch percent: 0.200, step: 89, loss is 22.535486
+epoch: 0, current epoch percent: 0.202, step: 90, loss is 14.218921
+epoch: 0, current epoch percent: 0.204, step: 91, loss is 16.047913
+epoch: 0, current epoch percent: 0.206, step: 92, loss is 18.906702
+epoch: 0, current epoch percent: 0.209, step: 93, loss is 15.406967
+epoch: 0, current epoch percent: 0.211, step: 94, loss is 17.455103
+epoch: 0, current epoch percent: 0.213, step: 95, loss is 14.085382
+epoch: 0, current epoch percent: 0.215, step: 96, loss is 14.223788
+epoch: 0, current epoch percent: 0.217, step: 97, loss is 13.227438
+epoch: 0, current epoch percent: 0.220, step: 98, loss is 18.866705
+epoch: 0, current epoch percent: 0.222, step: 99, loss is 23.63031
+epoch: 0, current epoch percent: 0.224, step: 100, loss is 15.582889
+epoch: 0, current epoch percent: 0.226, step: 101, loss is 18.307278
+epoch: 0, current epoch percent: 0.229, step: 102, loss is 16.97789
+epoch: 0, current epoch percent: 0.231, step: 103, loss is 15.425699
+epoch: 0, current epoch percent: 0.233, step: 104, loss is 12.976163
+epoch: 0, current epoch percent: 0.235, step: 105, loss is 16.007029
+epoch: 0, current epoch percent: 0.238, step: 106, loss is 15.75148
+epoch: 0, current epoch percent: 0.240, step: 107, loss is 18.269812
+epoch: 0, current epoch percent: 0.242, step: 108, loss is 17.129272
+epoch: 0, current epoch percent: 0.244, step: 109, loss is 13.486966
+epoch: 0, current epoch percent: 0.247, step: 110, loss is 13.748087
+epoch: 0, current epoch percent: 0.249, step: 111, loss is 15.481466
+epoch: 0, current epoch percent: 0.251, step: 112, loss is 17.147297
+epoch: 0, current epoch percent: 0.253, step: 113, loss is 11.586792
+epoch: 0, current epoch percent: 0.256, step: 114, loss is 13.935864
+epoch: 0, current epoch percent: 0.258, step: 115, loss is 11.785275
+epoch: 0, current epoch percent: 0.260, step: 116, loss is 12.309118
+epoch: 0, current epoch percent: 0.262, step: 117, loss is 13.827542
+epoch: 0, current epoch percent: 0.265, step: 118, loss is 16.61095
+epoch: 0, current epoch percent: 0.267, step: 119, loss is 11.661982
+epoch: 0, current epoch percent: 0.269, step: 120, loss is 13.062988
+epoch: 0, current epoch percent: 0.271, step: 121, loss is 12.278913
+epoch: 0, current epoch percent: 0.274, step: 122, loss is 14.721655
+epoch: 0, current epoch percent: 0.276, step: 123, loss is 15.63472
+epoch: 0, current epoch percent: 0.278, step: 124, loss is 17.814215
+epoch: 0, current epoch percent: 0.280, step: 125, loss is 15.320131
+epoch: 0, current epoch percent: 0.283, step: 126, loss is 17.11822
+epoch: 0, current epoch percent: 0.285, step: 127, loss is 19.557499
+epoch: 0, current epoch percent: 0.287, step: 128, loss is 12.638904
+epoch: 0, current epoch percent: 0.289, step: 129, loss is 11.451685
+epoch: 0, current epoch percent: 0.291, step: 130, loss is 15.305554
+epoch: 0, current epoch percent: 0.294, step: 131, loss is 17.933224
+epoch: 0, current epoch percent: 0.296, step: 132, loss is 17.920258
+epoch: 0, current epoch percent: 0.298, step: 133, loss is 12.808344
+epoch: 0, current epoch percent: 0.300, step: 134, loss is 11.506083
+epoch: 0, current epoch percent: 0.303, step: 135, loss is 12.432727
+epoch: 0, current epoch percent: 0.305, step: 136, loss is 10.192301
+epoch: 0, current epoch percent: 0.307, step: 137, loss is 13.681509
+epoch: 0, current epoch percent: 0.309, step: 138, loss is 15.660059
+epoch: 0, current epoch percent: 0.312, step: 139, loss is 14.383868
+epoch: 0, current epoch percent: 0.314, step: 140, loss is 15.0512295
+epoch: 0, current epoch percent: 0.316, step: 141, loss is 11.992529
+epoch: 0, current epoch percent: 0.318, step: 142, loss is 12.09862
+epoch: 0, current epoch percent: 0.321, step: 143, loss is 11.696057
+epoch: 0, current epoch percent: 0.323, step: 144, loss is 11.27984
+epoch: 0, current epoch percent: 0.325, step: 145, loss is 14.182879
+epoch: 0, current epoch percent: 0.327, step: 146, loss is 11.352633
+epoch: 0, current epoch percent: 0.330, step: 147, loss is 10.156458
+epoch: 0, current epoch percent: 0.332, step: 148, loss is 8.4560795
+epoch: 0, current epoch percent: 0.334, step: 149, loss is 11.036209
+epoch: 0, current epoch percent: 0.336, step: 150, loss is 9.533526
+epoch: 0, current epoch percent: 0.339, step: 151, loss is 11.73844
+epoch: 0, current epoch percent: 0.341, step: 152, loss is 12.438067
+epoch: 0, current epoch percent: 0.343, step: 153, loss is 10.229532
+epoch: 0, current epoch percent: 0.345, step: 154, loss is 8.044439
+epoch: 0, current epoch percent: 0.348, step: 155, loss is 13.015274
+epoch: 0, current epoch percent: 0.350, step: 156, loss is 10.127457
+epoch: 0, current epoch percent: 0.352, step: 157, loss is 9.000778
+epoch: 0, current epoch percent: 0.354, step: 158, loss is 8.162619
+epoch: 0, current epoch percent: 0.357, step: 159, loss is 8.891516
+epoch: 0, current epoch percent: 0.359, step: 160, loss is 12.152997
+epoch: 0, current epoch percent: 0.361, step: 161, loss is 9.803717
+epoch: 0, current epoch percent: 0.363, step: 162, loss is 10.516049
+epoch: 0, current epoch percent: 0.365, step: 163, loss is 9.531881
+epoch: 0, current epoch percent: 0.368, step: 164, loss is 9.948026
+epoch: 0, current epoch percent: 0.370, step: 165, loss is 12.392496
+epoch: 0, current epoch percent: 0.372, step: 166, loss is 13.422607
+epoch: 0, current epoch percent: 0.374, step: 167, loss is 15.989649
+epoch: 0, current epoch percent: 0.377, step: 168, loss is 14.595835
+epoch: 0, current epoch percent: 0.379, step: 169, loss is 13.761528
+epoch: 0, current epoch percent: 0.381, step: 170, loss is 10.742838
+epoch: 0, current epoch percent: 0.383, step: 171, loss is 8.956594
+epoch: 0, current epoch percent: 0.386, step: 172, loss is 8.49238
+epoch: 0, current epoch percent: 0.388, step: 173, loss is 10.542935
+epoch: 0, current epoch percent: 0.390, step: 174, loss is 9.929789
+epoch: 0, current epoch percent: 0.392, step: 175, loss is 9.516144
+epoch: 0, current epoch percent: 0.395, step: 176, loss is 10.671133
+epoch: 0, current epoch percent: 0.397, step: 177, loss is 9.3368225
+epoch: 0, current epoch percent: 0.399, step: 178, loss is 7.46116
+epoch: 0, current epoch percent: 0.401, step: 179, loss is 13.51857
+epoch: 0, current epoch percent: 0.404, step: 180, loss is 9.643137
+epoch: 0, current epoch percent: 0.406, step: 181, loss is 11.615311
+epoch: 0, current epoch percent: 0.408, step: 182, loss is 11.449414
+epoch: 0, current epoch percent: 0.410, step: 183, loss is 12.282156
+epoch: 0, current epoch percent: 0.413, step: 184, loss is 8.361997
+epoch: 0, current epoch percent: 0.415, step: 185, loss is 7.672925
+epoch: 0, current epoch percent: 0.417, step: 186, loss is 9.340536
+epoch: 0, current epoch percent: 0.419, step: 187, loss is 12.691141
+epoch: 0, current epoch percent: 0.422, step: 188, loss is 8.724835
+epoch: 0, current epoch percent: 0.424, step: 189, loss is 6.823465
+epoch: 0, current epoch percent: 0.426, step: 190, loss is 11.875021
+epoch: 0, current epoch percent: 0.428, step: 191, loss is 12.422107
+epoch: 0, current epoch percent: 0.430, step: 192, loss is 10.215372
+epoch: 0, current epoch percent: 0.433, step: 193, loss is 7.691144
+epoch: 0, current epoch percent: 0.435, step: 194, loss is 6.161386
+epoch: 0, current epoch percent: 0.437, step: 195, loss is 10.041132
+epoch: 0, current epoch percent: 0.439, step: 196, loss is 6.4077516
+epoch: 0, current epoch percent: 0.442, step: 197, loss is 10.232071
+epoch: 0, current epoch percent: 0.444, step: 198, loss is 8.109009
+epoch: 0, current epoch percent: 0.446, step: 199, loss is 11.347488
+epoch: 0, current epoch percent: 0.448, step: 200, loss is 10.410937
+epoch: 0, current epoch percent: 0.451, step: 201, loss is 8.362259
+epoch: 0, current epoch percent: 0.453, step: 202, loss is 7.277158
+epoch: 0, current epoch percent: 0.455, step: 203, loss is 12.225125
+epoch: 0, current epoch percent: 0.457, step: 204, loss is 8.732901
+epoch: 0, current epoch percent: 0.460, step: 205, loss is 8.221649
+epoch: 0, current epoch percent: 0.462, step: 206, loss is 10.991223
+epoch: 0, current epoch percent: 0.464, step: 207, loss is 10.456461
+epoch: 0, current epoch percent: 0.466, step: 208, loss is 8.688517
+epoch: 0, current epoch percent: 0.469, step: 209, loss is 10.521662
+epoch: 0, current epoch percent: 0.471, step: 210, loss is 7.668924
+epoch: 0, current epoch percent: 0.473, step: 211, loss is 10.231265
+epoch: 0, current epoch percent: 0.475, step: 212, loss is 13.940817
+epoch: 0, current epoch percent: 0.478, step: 213, loss is 7.9587493
+epoch: 0, current epoch percent: 0.480, step: 214, loss is 7.475482
+epoch: 0, current epoch percent: 0.482, step: 215, loss is 7.7697725
+epoch: 0, current epoch percent: 0.484, step: 216, loss is 9.62991
+epoch: 0, current epoch percent: 0.487, step: 217, loss is 8.507782
+epoch: 0, current epoch percent: 0.489, step: 218, loss is 6.9434114
+epoch: 0, current epoch percent: 0.491, step: 219, loss is 8.453812
+epoch: 0, current epoch percent: 0.493, step: 220, loss is 6.626935
+epoch: 0, current epoch percent: 0.496, step: 221, loss is 10.921536
+epoch: 0, current epoch percent: 0.498, step: 222, loss is 8.318609
+epoch: 0, current epoch percent: 0.500, step: 223, loss is 8.110205
+epoch: 0, current epoch percent: 0.502, step: 224, loss is 8.476187
+epoch: 0, current epoch percent: 0.504, step: 225, loss is 10.6064
+epoch: 0, current epoch percent: 0.507, step: 226, loss is 10.942624
+epoch: 0, current epoch percent: 0.509, step: 227, loss is 8.0690155
+epoch: 0, current epoch percent: 0.511, step: 228, loss is 6.396701
+epoch: 0, current epoch percent: 0.513, step: 229, loss is 6.4975433
+epoch: 0, current epoch percent: 0.516, step: 230, loss is 5.6870666
+epoch: 0, current epoch percent: 0.518, step: 231, loss is 7.598938
+epoch: 0, current epoch percent: 0.520, step: 232, loss is 7.3445005
+epoch: 0, current epoch percent: 0.522, step: 233, loss is 6.187744
+epoch: 0, current epoch percent: 0.525, step: 234, loss is 7.5441713
+epoch: 0, current epoch percent: 0.527, step: 235, loss is 6.17713
+epoch: 0, current epoch percent: 0.529, step: 236, loss is 10.1593075
+epoch: 0, current epoch percent: 0.531, step: 237, loss is 9.128378
+epoch: 0, current epoch percent: 0.534, step: 238, loss is 6.482184
+epoch: 0, current epoch percent: 0.536, step: 239, loss is 9.4882145
+epoch: 0, current epoch percent: 0.538, step: 240, loss is 7.974045
+epoch: 0, current epoch percent: 0.540, step: 241, loss is 10.289432
+epoch: 0, current epoch percent: 0.543, step: 242, loss is 6.2067842
+epoch: 0, current epoch percent: 0.545, step: 243, loss is 7.360373
+epoch: 0, current epoch percent: 0.547, step: 244, loss is 5.143573
+epoch: 0, current epoch percent: 0.549, step: 245, loss is 9.012644
+epoch: 0, current epoch percent: 0.552, step: 246, loss is 4.775018
+epoch: 0, current epoch percent: 0.554, step: 247, loss is 5.2406983
+epoch: 0, current epoch percent: 0.556, step: 248, loss is 5.9555664
+epoch: 0, current epoch percent: 0.558, step: 249, loss is 6.184732
+epoch: 0, current epoch percent: 0.561, step: 250, loss is 5.949585
+epoch: 0, current epoch percent: 0.563, step: 251, loss is 6.5098906
+epoch: 0, current epoch percent: 0.565, step: 252, loss is 6.8192263
+epoch: 0, current epoch percent: 0.567, step: 253, loss is 6.064502
+epoch: 0, current epoch percent: 0.570, step: 254, loss is 7.184451
+epoch: 0, current epoch percent: 0.572, step: 255, loss is 5.308133
+epoch: 0, current epoch percent: 0.574, step: 256, loss is 3.8545747
+epoch: 0, current epoch percent: 0.576, step: 257, loss is 8.693466
+epoch: 0, current epoch percent: 0.578, step: 258, loss is 6.1930723
+epoch: 0, current epoch percent: 0.581, step: 259, loss is 7.724429
+epoch: 0, current epoch percent: 0.583, step: 260, loss is 6.7177215
+epoch: 0, current epoch percent: 0.585, step: 261, loss is 7.380774
+epoch: 0, current epoch percent: 0.587, step: 262, loss is 8.659632
+epoch: 0, current epoch percent: 0.590, step: 263, loss is 6.1264925
+epoch: 0, current epoch percent: 0.592, step: 264, loss is 6.550433
+epoch: 0, current epoch percent: 0.594, step: 265, loss is 6.040454
+epoch: 0, current epoch percent: 0.596, step: 266, loss is 11.007599
+epoch: 0, current epoch percent: 0.599, step: 267, loss is 9.061353
+epoch: 0, current epoch percent: 0.601, step: 268, loss is 9.1599455
+epoch: 0, current epoch percent: 0.603, step: 269, loss is 8.502322
+epoch: 0, current epoch percent: 0.605, step: 270, loss is 6.4539003
+epoch: 0, current epoch percent: 0.608, step: 271, loss is 6.4466767
+epoch: 0, current epoch percent: 0.610, step: 272, loss is 8.594854
+epoch: 0, current epoch percent: 0.612, step: 273, loss is 5.312921
+epoch: 0, current epoch percent: 0.614, step: 274, loss is 7.291861
+epoch: 0, current epoch percent: 0.617, step: 275, loss is 8.066904
+epoch: 0, current epoch percent: 0.619, step: 276, loss is 5.984259
+epoch: 0, current epoch percent: 0.621, step: 277, loss is 8.4921875
+epoch: 0, current epoch percent: 0.623, step: 278, loss is 5.7779083
+epoch: 0, current epoch percent: 0.626, step: 279, loss is 7.6616607
+epoch: 0, current epoch percent: 0.628, step: 280, loss is 5.741464
+epoch: 0, current epoch percent: 0.630, step: 281, loss is 6.411237
+epoch: 0, current epoch percent: 0.632, step: 282, loss is 7.395578
+epoch: 0, current epoch percent: 0.635, step: 283, loss is 6.9281797
+epoch: 0, current epoch percent: 0.637, step: 284, loss is 8.379587
+epoch: 0, current epoch percent: 0.639, step: 285, loss is 6.2982025
+epoch: 0, current epoch percent: 0.641, step: 286, loss is 7.7444124
+epoch: 0, current epoch percent: 0.643, step: 287, loss is 7.427222
+epoch: 0, current epoch percent: 0.646, step: 288, loss is 4.5570464
+epoch: 0, current epoch percent: 0.648, step: 289, loss is 3.774057
+epoch: 0, current epoch percent: 0.650, step: 290, loss is 8.189636
+epoch: 0, current epoch percent: 0.652, step: 291, loss is 7.9485383
+epoch: 0, current epoch percent: 0.655, step: 292, loss is 4.6516633
+epoch: 0, current epoch percent: 0.657, step: 293, loss is 5.786481
+epoch: 0, current epoch percent: 0.659, step: 294, loss is 7.827573
+epoch: 0, current epoch percent: 0.661, step: 295, loss is 6.418756
+epoch: 0, current epoch percent: 0.664, step: 296, loss is 7.4768615
+epoch: 0, current epoch percent: 0.666, step: 297, loss is 5.416205
+epoch: 0, current epoch percent: 0.668, step: 298, loss is 5.55741
+epoch: 0, current epoch percent: 0.670, step: 299, loss is 6.135016
+epoch: 0, current epoch percent: 0.673, step: 300, loss is 7.072156
+epoch: 0, current epoch percent: 0.675, step: 301, loss is 5.4830537
+epoch: 0, current epoch percent: 0.677, step: 302, loss is 5.067874
+epoch: 0, current epoch percent: 0.679, step: 303, loss is 4.580008
+epoch: 0, current epoch percent: 0.682, step: 304, loss is 5.8492002
+epoch: 0, current epoch percent: 0.684, step: 305, loss is 7.7916045
+epoch: 0, current epoch percent: 0.686, step: 306, loss is 9.020468
+epoch: 0, current epoch percent: 0.688, step: 307, loss is 7.307132
+epoch: 0, current epoch percent: 0.691, step: 308, loss is 5.622754
+epoch: 0, current epoch percent: 0.693, step: 309, loss is 7.0044465
+epoch: 0, current epoch percent: 0.695, step: 310, loss is 5.312207
+epoch: 0, current epoch percent: 0.697, step: 311, loss is 8.062536
+epoch: 0, current epoch percent: 0.700, step: 312, loss is 6.971362
+epoch: 0, current epoch percent: 0.702, step: 313, loss is 6.7277894
+epoch: 0, current epoch percent: 0.704, step: 314, loss is 8.838873
+epoch: 0, current epoch percent: 0.706, step: 315, loss is 4.899527
+epoch: 0, current epoch percent: 0.709, step: 316, loss is 4.8505735
+epoch: 0, current epoch percent: 0.711, step: 317, loss is 6.462433
+epoch: 0, current epoch percent: 0.713, step: 318, loss is 6.9700866
+epoch: 0, current epoch percent: 0.715, step: 319, loss is 4.6472535
+epoch: 0, current epoch percent: 0.717, step: 320, loss is 6.69841
+epoch: 0, current epoch percent: 0.720, step: 321, loss is 6.55441
+epoch: 0, current epoch percent: 0.722, step: 322, loss is 6.502341
+epoch: 0, current epoch percent: 0.724, step: 323, loss is 6.9665985
+epoch: 0, current epoch percent: 0.726, step: 324, loss is 5.6861787
+epoch: 0, current epoch percent: 0.729, step: 325, loss is 6.834146
+epoch: 0, current epoch percent: 0.731, step: 326, loss is 7.368741
+epoch: 0, current epoch percent: 0.733, step: 327, loss is 5.218829
+epoch: 0, current epoch percent: 0.735, step: 328, loss is 4.824054
+epoch: 0, current epoch percent: 0.738, step: 329, loss is 3.9986603
+epoch: 0, current epoch percent: 0.740, step: 330, loss is 5.6699038
+epoch: 0, current epoch percent: 0.742, step: 331, loss is 7.4081087
+epoch: 0, current epoch percent: 0.744, step: 332, loss is 4.6218233
+epoch: 0, current epoch percent: 0.747, step: 333, loss is 5.471759
+epoch: 0, current epoch percent: 0.749, step: 334, loss is 6.9720335
+epoch: 0, current epoch percent: 0.751, step: 335, loss is 3.5914307
+epoch: 0, current epoch percent: 0.753, step: 336, loss is 7.094846
+epoch: 0, current epoch percent: 0.756, step: 337, loss is 5.5540133
+epoch: 0, current epoch percent: 0.758, step: 338, loss is 7.231183
+epoch: 0, current epoch percent: 0.760, step: 339, loss is 7.250403
+epoch: 0, current epoch percent: 0.762, step: 340, loss is 6.1157136
+epoch: 0, current epoch percent: 0.765, step: 341, loss is 6.853259
+epoch: 0, current epoch percent: 0.767, step: 342, loss is 5.97832
+epoch: 0, current epoch percent: 0.769, step: 343, loss is 6.2946014
+epoch: 0, current epoch percent: 0.771, step: 344, loss is 6.365387
+epoch: 0, current epoch percent: 0.774, step: 345, loss is 2.7657776
+epoch: 0, current epoch percent: 0.776, step: 346, loss is 3.4854493
+epoch: 0, current epoch percent: 0.778, step: 347, loss is 4.6458893
+epoch: 0, current epoch percent: 0.780, step: 348, loss is 4.075061
+epoch: 0, current epoch percent: 0.783, step: 349, loss is 4.1982484
+epoch: 0, current epoch percent: 0.785, step: 350, loss is 7.0384674
+epoch: 0, current epoch percent: 0.787, step: 351, loss is 3.2952638
+epoch: 0, current epoch percent: 0.789, step: 352, loss is 4.813266
+epoch: 0, current epoch percent: 0.791, step: 353, loss is 3.417813
+epoch: 0, current epoch percent: 0.794, step: 354, loss is 6.757135
+epoch: 0, current epoch percent: 0.796, step: 355, loss is 8.346731
+epoch: 0, current epoch percent: 0.798, step: 356, loss is 9.6471405
+epoch: 0, current epoch percent: 0.800, step: 357, loss is 5.5137453
+epoch: 0, current epoch percent: 0.803, step: 358, loss is 6.377243
+epoch: 0, current epoch percent: 0.805, step: 359, loss is 5.0991793
+epoch: 0, current epoch percent: 0.807, step: 360, loss is 4.7834077
+epoch: 0, current epoch percent: 0.809, step: 361, loss is 7.5179353
+epoch: 0, current epoch percent: 0.812, step: 362, loss is 7.0751925
+epoch: 0, current epoch percent: 0.814, step: 363, loss is 5.1625853
+epoch: 0, current epoch percent: 0.816, step: 364, loss is 6.7588105
+epoch: 0, current epoch percent: 0.818, step: 365, loss is 4.480957
+epoch: 0, current epoch percent: 0.821, step: 366, loss is 7.117749
+epoch: 0, current epoch percent: 0.823, step: 367, loss is 5.247702
+epoch: 0, current epoch percent: 0.825, step: 368, loss is 4.8011565
+epoch: 0, current epoch percent: 0.827, step: 369, loss is 7.297269
+epoch: 0, current epoch percent: 0.830, step: 370, loss is 5.729486
+epoch: 0, current epoch percent: 0.832, step: 371, loss is 3.0001006
+epoch: 0, current epoch percent: 0.834, step: 372, loss is 3.8592134
+epoch: 0, current epoch percent: 0.836, step: 373, loss is 6.2667513
+epoch: 0, current epoch percent: 0.839, step: 374, loss is 7.0260987
+epoch: 0, current epoch percent: 0.841, step: 375, loss is 5.5323763
+epoch: 0, current epoch percent: 0.843, step: 376, loss is 4.792093
+epoch: 0, current epoch percent: 0.845, step: 377, loss is 3.6024718
+epoch: 0, current epoch percent: 0.848, step: 378, loss is 5.798465
+epoch: 0, current epoch percent: 0.850, step: 379, loss is 4.901941
+epoch: 0, current epoch percent: 0.852, step: 380, loss is 6.803659
+epoch: 0, current epoch percent: 0.854, step: 381, loss is 4.5069337
+epoch: 0, current epoch percent: 0.857, step: 382, loss is 5.086383
+epoch: 0, current epoch percent: 0.859, step: 383, loss is 4.248294
+epoch: 0, current epoch percent: 0.861, step: 384, loss is 8.297046
+epoch: 0, current epoch percent: 0.863, step: 385, loss is 5.0672364
+epoch: 0, current epoch percent: 0.865, step: 386, loss is 4.500333
+epoch: 0, current epoch percent: 0.868, step: 387, loss is 5.9487
+epoch: 0, current epoch percent: 0.870, step: 388, loss is 6.3713164
+epoch: 0, current epoch percent: 0.872, step: 389, loss is 6.2421355
+epoch: 0, current epoch percent: 0.874, step: 390, loss is 5.6287966
+epoch: 0, current epoch percent: 0.877, step: 391, loss is 4.1951385
+epoch: 0, current epoch percent: 0.879, step: 392, loss is 5.6694856
+epoch: 0, current epoch percent: 0.881, step: 393, loss is 4.329291
+epoch: 0, current epoch percent: 0.883, step: 394, loss is 3.7808166
+epoch: 0, current epoch percent: 0.886, step: 395, loss is 6.9656982
+epoch: 0, current epoch percent: 0.888, step: 396, loss is 5.6167207
+epoch: 0, current epoch percent: 0.890, step: 397, loss is 5.4509215
+epoch: 0, current epoch percent: 0.892, step: 398, loss is 4.542572
+epoch: 0, current epoch percent: 0.895, step: 399, loss is 6.212799
+epoch: 0, current epoch percent: 0.897, step: 400, loss is 4.9581056
+epoch: 0, current epoch percent: 0.899, step: 401, loss is 5.068109
+epoch: 0, current epoch percent: 0.901, step: 402, loss is 5.773654
+epoch: 0, current epoch percent: 0.904, step: 403, loss is 3.9771729
+epoch: 0, current epoch percent: 0.906, step: 404, loss is 7.4073577
+epoch: 0, current epoch percent: 0.908, step: 405, loss is 6.7331023
+epoch: 0, current epoch percent: 0.910, step: 406, loss is 6.8060274
+epoch: 0, current epoch percent: 0.913, step: 407, loss is 4.757416
+epoch: 0, current epoch percent: 0.915, step: 408, loss is 3.067862
+epoch: 0, current epoch percent: 0.917, step: 409, loss is 4.0162477
+epoch: 0, current epoch percent: 0.919, step: 410, loss is 3.8744874
+epoch: 0, current epoch percent: 0.922, step: 411, loss is 5.359601
+epoch: 0, current epoch percent: 0.924, step: 412, loss is 4.6920652
+epoch: 0, current epoch percent: 0.926, step: 413, loss is 6.778815
+epoch: 0, current epoch percent: 0.928, step: 414, loss is 6.4576387
+epoch: 0, current epoch percent: 0.930, step: 415, loss is 3.0118775
+epoch: 0, current epoch percent: 0.933, step: 416, loss is 5.9890137
+epoch: 0, current epoch percent: 0.935, step: 417, loss is 3.675415
+epoch: 0, current epoch percent: 0.937, step: 418, loss is 4.221228
+epoch: 0, current epoch percent: 0.939, step: 419, loss is 6.9413514
+epoch: 0, current epoch percent: 0.942, step: 420, loss is 6.296466
+epoch: 0, current epoch percent: 0.944, step: 421, loss is 3.4484468
+epoch: 0, current epoch percent: 0.946, step: 422, loss is 6.124817
+epoch: 0, current epoch percent: 0.948, step: 423, loss is 5.1167784
+epoch: 0, current epoch percent: 0.951, step: 424, loss is 7.022916
+epoch: 0, current epoch percent: 0.953, step: 425, loss is 5.1888914
+epoch: 0, current epoch percent: 0.955, step: 426, loss is 3.1213136
+epoch: 0, current epoch percent: 0.957, step: 427, loss is 6.142825
+epoch: 0, current epoch percent: 0.960, step: 428, loss is 4.737222
+epoch: 0, current epoch percent: 0.962, step: 429, loss is 5.363913
+epoch: 0, current epoch percent: 0.964, step: 430, loss is 6.197531
+epoch: 0, current epoch percent: 0.966, step: 431, loss is 6.07753
+epoch: 0, current epoch percent: 0.969, step: 432, loss is 4.5484467
+epoch: 0, current epoch percent: 0.971, step: 433, loss is 6.1814547
+epoch: 0, current epoch percent: 0.973, step: 434, loss is 4.343741
+epoch: 0, current epoch percent: 0.975, step: 435, loss is 5.058615
+epoch: 0, current epoch percent: 0.978, step: 436, loss is 3.5679047
+epoch: 0, current epoch percent: 0.980, step: 437, loss is 5.286264
+epoch: 0, current epoch percent: 0.982, step: 438, loss is 5.0761137
+epoch: 0, current epoch percent: 0.984, step: 439, loss is 5.4471803
+epoch: 0, current epoch percent: 0.987, step: 440, loss is 4.5289583
+epoch: 0, current epoch percent: 0.989, step: 441, loss is 5.2819796
+epoch: 0, current epoch percent: 0.991, step: 442, loss is 3.6032562
+epoch: 0, current epoch percent: 0.993, step: 443, loss is 3.638028
+epoch: 0, current epoch percent: 0.996, step: 444, loss is 5.516217
+epoch: 0, current epoch percent: 0.998, step: 445, loss is 3.3968048
+epoch: 0, current epoch percent: 1.000, step: 446, loss is 6.1193757
+epoch time: 3357283.245 ms, per step time: 7527.541 ms
+me: 7167.443 ms
+current ACC 87.353246%, current F1 80.210553%, self._best_val_F1 80.210553% 
+epoch: 1, current epoch percent: 0.002, step: 447, loss is 6.0913115
+epoch: 1, current epoch percent: 0.004, step: 448, loss is 8.274928
+epoch: 1, current epoch percent: 0.007, step: 449, loss is 6.1246157
+epoch: 1, current epoch percent: 0.009, step: 450, loss is 8.378042
+epoch: 1, current epoch percent: 0.011, step: 451, loss is 9.237829
+epoch: 1, current epoch percent: 0.013, step: 452, loss is 6.400177
+epoch: 1, current epoch percent: 0.016, step: 453, loss is 7.7822022
+epoch: 1, current epoch percent: 0.018, step: 454, loss is 6.983655
+epoch: 1, current epoch percent: 0.020, step: 455, loss is 5.2784424
+epoch: 1, current epoch percent: 0.022, step: 456, loss is 6.8832946
+epoch: 1, current epoch percent: 0.025, step: 457, loss is 3.5401855
+epoch: 1, current epoch percent: 0.027, step: 458, loss is 5.3330016
+epoch: 1, current epoch percent: 0.029, step: 459, loss is 7.001474
+epoch: 1, current epoch percent: 0.031, step: 460, loss is 4.6305666
+epoch: 1, current epoch percent: 0.034, step: 461, loss is 4.9129763
+epoch: 1, current epoch percent: 0.036, step: 462, loss is 4.9051056
+epoch: 1, current epoch percent: 0.038, step: 463, loss is 4.4056396
+epoch: 1, current epoch percent: 0.040, step: 464, loss is 6.3449616
+epoch: 1, current epoch percent: 0.043, step: 465, loss is 6.1461
+epoch: 1, current epoch percent: 0.045, step: 466, loss is 6.6978607
+epoch: 1, current epoch percent: 0.047, step: 467, loss is 5.43027
+epoch: 1, current epoch percent: 0.049, step: 468, loss is 5.1997557
+epoch: 1, current epoch percent: 0.052, step: 469, loss is 4.603467
+epoch: 1, current epoch percent: 0.054, step: 470, loss is 4.2681
+epoch: 1, current epoch percent: 0.056, step: 471, loss is 4.4919953
+epoch: 1, current epoch percent: 0.058, step: 472, loss is 8.69443
+epoch: 1, current epoch percent: 0.061, step: 473, loss is 3.700711
+epoch: 1, current epoch percent: 0.063, step: 474, loss is 8.164621
+epoch: 1, current epoch percent: 0.065, step: 475, loss is 5.945151
+epoch: 1, current epoch percent: 0.067, step: 476, loss is 5.2570677
+epoch: 1, current epoch percent: 0.070, step: 477, loss is 8.22876
+epoch: 1, current epoch percent: 0.072, step: 478, loss is 5.7626677
+epoch: 1, current epoch percent: 0.074, step: 479, loss is 4.8634887
+epoch: 1, current epoch percent: 0.076, step: 480, loss is 6.5541472
+epoch: 1, current epoch percent: 0.078, step: 481, loss is 6.161133
+epoch: 1, current epoch percent: 0.081, step: 482, loss is 7.4421206
+epoch: 1, current epoch percent: 0.083, step: 483, loss is 4.8314238
+epoch: 1, current epoch percent: 0.085, step: 484, loss is 7.0647097
+epoch: 1, current epoch percent: 0.087, step: 485, loss is 4.1134214
+epoch: 1, current epoch percent: 0.090, step: 486, loss is 8.3528385
+epoch: 1, current epoch percent: 0.092, step: 487, loss is 7.944116
+epoch: 1, current epoch percent: 0.094, step: 488, loss is 6.826224
+epoch: 1, current epoch percent: 0.096, step: 489, loss is 5.192163
+epoch: 1, current epoch percent: 0.099, step: 490, loss is 5.930856
+epoch: 1, current epoch percent: 0.101, step: 491, loss is 5.5979066
+epoch: 1, current epoch percent: 0.103, step: 492, loss is 4.462021
+epoch: 1, current epoch percent: 0.105, step: 493, loss is 8.763654
+epoch: 1, current epoch percent: 0.108, step: 494, loss is 8.424518
+epoch: 1, current epoch percent: 0.110, step: 495, loss is 7.6680784
+epoch: 1, current epoch percent: 0.112, step: 496, loss is 7.611041
+epoch: 1, current epoch percent: 0.114, step: 497, loss is 7.344217
+epoch: 1, current epoch percent: 0.117, step: 498, loss is 6.013861
+epoch: 1, current epoch percent: 0.119, step: 499, loss is 3.8773377
+epoch: 1, current epoch percent: 0.121, step: 500, loss is 7.2925386
+epoch: 1, current epoch percent: 0.123, step: 501, loss is 3.9146209
+epoch: 1, current epoch percent: 0.126, step: 502, loss is 4.7218046
+epoch: 1, current epoch percent: 0.128, step: 503, loss is 4.9981627
+epoch: 1, current epoch percent: 0.130, step: 504, loss is 8.014227
+epoch: 1, current epoch percent: 0.132, step: 505, loss is 6.096158
+epoch: 1, current epoch percent: 0.135, step: 506, loss is 7.4544587
+epoch: 1, current epoch percent: 0.137, step: 507, loss is 5.048233
+epoch: 1, current epoch percent: 0.139, step: 508, loss is 4.5178437
+epoch: 1, current epoch percent: 0.141, step: 509, loss is 6.2467957
+epoch: 1, current epoch percent: 0.143, step: 510, loss is 5.6948333
+epoch: 1, current epoch percent: 0.146, step: 511, loss is 4.590045
+epoch: 1, current epoch percent: 0.148, step: 512, loss is 10.212506
+epoch: 1, current epoch percent: 0.150, step: 513, loss is 5.566397
+epoch: 1, current epoch percent: 0.152, step: 514, loss is 10.119949
+epoch: 1, current epoch percent: 0.155, step: 515, loss is 7.291861
+epoch: 1, current epoch percent: 0.157, step: 516, loss is 4.6958895
+epoch: 1, current epoch percent: 0.159, step: 517, loss is 5.66575
+epoch: 1, current epoch percent: 0.161, step: 518, loss is 6.8122377
+epoch: 1, current epoch percent: 0.164, step: 519, loss is 6.7925353

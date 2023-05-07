@@ -1,0 +1,4 @@
+Log file created at: 2023/05/03 08:25:13
+Running on machine: notebook-f6161b4a-6350-48b9-b46d-24e7041e2a8b
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+[CRITICAL] DEVICE(21960,ffff82c36780,python):2023-05-03-08:25:13.324.740 [mindspore/ccsrc/plugin/device/ascend/hal/device/ascend_memory_adapter.cc:60] Initialize] Malloc device memory failed, free memory size is less than half of total memory size.Device 0 Device HBM total size:34359738368 Device HBM free size:2104090624 may be other processes occupying this card, check as: ps -ef|grep python

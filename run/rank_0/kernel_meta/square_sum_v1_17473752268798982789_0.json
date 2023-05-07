@@ -1,0 +1,14 @@
+{
+    "KBHit":false,
+    "binFileName":"square_sum_v1_17473752268798982789_0",
+    "binFileSuffix":".o",
+    "blockDim":4,
+    "kernelName":"square_sum_v1_17473752268798982789_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        1
+    ],
+    "sha256":"0889b85b491799d102e8560b45c8b374028f4142f5543f3b62d451b48689cd02"
+}

@@ -1,0 +1,14 @@
+{
+    "batchBindOnly":1,
+    "binFileName":"reciprocal_4159521733713135167_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"reciprocal_4159521733713135167_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0
+    ],
+    "sha256":"e4c0825d0ed6ebf4ba27d66d128bc9e554d68dcc5d81204e36ea33314b9ab676"
+}

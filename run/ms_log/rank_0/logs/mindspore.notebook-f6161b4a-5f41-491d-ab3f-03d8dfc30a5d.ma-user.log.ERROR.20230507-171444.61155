@@ -1,0 +1,28 @@
+Log file created at: 2023/05/07 17:14:44
+Running on machine: notebook-f6161b4a-5f41-491d-ab3f-03d8dfc30a5d
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+[ERROR] ANALYZER(61155,ffff9b87d780,python):2023-05-07-17:14:44.503.282 [mindspore/ccsrc/pipeline/jit/static_analysis/async_eval_result.cc:66] HandleException] Exception happened, check the information as below.
+
+The function call stack (See file '/home/ma-user/work/deep/scripts/rank_0/om/analyze_fail.dat' for more details):
+# 0 In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(96)
+        return self.network(*outputs)
+               ^
+# 1 In file /home/ma-user/work/deep/src/util.py(165)
+        if sens is None:
+# 2 In file /home/ma-user/work/deep/src/util.py(186)
+        if sens is None:
+# 3 In file /home/ma-user/work/deep/src/util.py(190)
+        return (loss, cond)
+                ^
+# 4 In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)
+        if self.is_training:
+        ^
+# 5 In file /home/ma-user/work/deep/src/LSTM_CRF.py(165)
+            total_score = self._normalization_factor(features)
+                          ^
+# 6 In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)
+        for idx in range(self.seq_length):
+# 7 In file /home/ma-user/work/deep/src/LSTM_CRF.py(119)
+            emit_score = self.reshape(feat, (self.batch_size, self.num_tags, 1))
+                         ^
+

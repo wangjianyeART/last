@@ -1,0 +1,25 @@
+{
+    "batchBindOnly":1,
+    "binFileName":"adam_apply_one_13606391258028440660_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"adam_apply_one_13606391258028440660_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"3793558643be4a413bc69092f034d4de1a29a59a85639b6868491d64d55a014c"
+}

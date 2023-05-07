@@ -1,0 +1,445 @@
+# [No.1] construct_wrapper.1
+# In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(94)/    def construct(self):/
+funcgraph fg_1(
+        %para1 : Ref[Tensor(F32)][]    # loss_scale
+        , %para2 : Ref[Tensor(I32)][]    # current_iterator_step
+        , %para3 : Ref[Tensor(I32)][]    # last_overflow_iterator_step
+        , %para4 : Ref[Tensor(F32)][25, 25]    # transitions
+        , %para5 : Ref[Tensor(F32)][1280, 304]    # lstm.lstm.weight_ih_l0
+        , %para6 : Ref[Tensor(F32)][1280, 304]    # lstm.lstm.weight_ih_l0_reverse
+        , %para7 : Ref[Tensor(F32)][1280, 640]    # lstm.lstm.weight_ih_l1
+        , %para8 : Ref[Tensor(F32)][1280, 640]    # lstm.lstm.weight_ih_l1_reverse
+        , %para9 : Ref[Tensor(F32)][1280, 320]    # lstm.lstm.weight_hh_l0
+        , %para10 : Ref[Tensor(F32)][1280, 320]    # lstm.lstm.weight_hh_l0_reverse
+        , %para11 : Ref[Tensor(F32)][1280, 320]    # lstm.lstm.weight_hh_l1
+        , %para12 : Ref[Tensor(F32)][1280, 320]    # lstm.lstm.weight_hh_l1_reverse
+        , %para13 : Ref[Tensor(F32)][25, 640]    # lstm.fc.weight
+        , %para14 : Ref[Tensor(F32)][25]    # layer_norm.gamma
+        , %para15 : Ref[Tensor(F32)][25]    # layer_norm.beta
+        , %para16 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_ih_l0
+        , %para17 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_ih_l0_reverse
+        , %para18 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_ih_l1
+        , %para19 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_ih_l1_reverse
+        , %para20 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_hh_l0
+        , %para21 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_hh_l0_reverse
+        , %para22 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_hh_l1
+        , %para23 : Ref[Tensor(F32)][1280]    # lstm.lstm.bias_hh_l1_reverse
+        , %para24 : Ref[Tensor(F32)][25]    # lstm.fc.bias
+        , %para25 : Ref[Tensor(F32)][25, 25]    # adam_m.transitions
+        , %para26 : Ref[Tensor(F32)][1280, 304]    # adam_m.lstm.lstm.weight_ih_l0
+        , %para27 : Ref[Tensor(F32)][1280, 304]    # adam_m.lstm.lstm.weight_ih_l0_reverse
+        , %para28 : Ref[Tensor(F32)][1280, 640]    # adam_m.lstm.lstm.weight_ih_l1
+        , %para29 : Ref[Tensor(F32)][1280, 640]    # adam_m.lstm.lstm.weight_ih_l1_reverse
+        , %para30 : Ref[Tensor(F32)][1280, 320]    # adam_m.lstm.lstm.weight_hh_l0
+        , %para31 : Ref[Tensor(F32)][1280, 320]    # adam_m.lstm.lstm.weight_hh_l0_reverse
+        , %para32 : Ref[Tensor(F32)][1280, 320]    # adam_m.lstm.lstm.weight_hh_l1
+        , %para33 : Ref[Tensor(F32)][1280, 320]    # adam_m.lstm.lstm.weight_hh_l1_reverse
+        , %para34 : Ref[Tensor(F32)][25, 640]    # adam_m.lstm.fc.weight
+        , %para35 : Ref[Tensor(F32)][25]    # adam_m.layer_norm.gamma
+        , %para36 : Ref[Tensor(F32)][25]    # adam_m.layer_norm.beta
+        , %para37 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_ih_l0
+        , %para38 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_ih_l0_reverse
+        , %para39 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_ih_l1
+        , %para40 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_ih_l1_reverse
+        , %para41 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_hh_l0
+        , %para42 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_hh_l0_reverse
+        , %para43 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_hh_l1
+        , %para44 : Ref[Tensor(F32)][1280]    # adam_m.lstm.lstm.bias_hh_l1_reverse
+        , %para45 : Ref[Tensor(F32)][25]    # adam_m.lstm.fc.bias
+        , %para46 : Ref[Tensor(F32)][25, 25]    # adam_v.transitions
+        , %para47 : Ref[Tensor(F32)][1280, 304]    # adam_v.lstm.lstm.weight_ih_l0
+        , %para48 : Ref[Tensor(F32)][1280, 304]    # adam_v.lstm.lstm.weight_ih_l0_reverse
+        , %para49 : Ref[Tensor(F32)][1280, 640]    # adam_v.lstm.lstm.weight_ih_l1
+        , %para50 : Ref[Tensor(F32)][1280, 640]    # adam_v.lstm.lstm.weight_ih_l1_reverse
+        , %para51 : Ref[Tensor(F32)][1280, 320]    # adam_v.lstm.lstm.weight_hh_l0
+        , %para52 : Ref[Tensor(F32)][1280, 320]    # adam_v.lstm.lstm.weight_hh_l0_reverse
+        , %para53 : Ref[Tensor(F32)][1280, 320]    # adam_v.lstm.lstm.weight_hh_l1
+        , %para54 : Ref[Tensor(F32)][1280, 320]    # adam_v.lstm.lstm.weight_hh_l1_reverse
+        , %para55 : Ref[Tensor(F32)][25, 640]    # adam_v.lstm.fc.weight
+        , %para56 : Ref[Tensor(F32)][25]    # adam_v.layer_norm.gamma
+        , %para57 : Ref[Tensor(F32)][25]    # adam_v.layer_norm.beta
+        , %para58 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_ih_l0
+        , %para59 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_ih_l0_reverse
+        , %para60 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_ih_l1
+        , %para61 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_ih_l1_reverse
+        , %para62 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_hh_l0
+        , %para63 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_hh_l0_reverse
+        , %para64 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_hh_l1
+        , %para65 : Ref[Tensor(F32)][1280]    # adam_v.lstm.lstm.bias_hh_l1_reverse
+        , %para66 : Ref[Tensor(F32)][25]    # adam_v.lstm.fc.bias
+        , %para67 : Ref[Tensor(I32)][1]    # global_step
+        , %para68 : Ref[Tensor(F32)][17145, 304]    # lstm.embedding.embedding_table
+    ) {
+
+#------------------------> 0
+    %1 = FuncGraph::fg_27()    # fg_27=construct.27 #scope: Default
+#[CNode]41
+    Primitive::Return{prim_type=1}(%1)    #(Undefined) #scope: Default
+      # In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(96)/        return self.network(*outputs)/#[CNode]42
+}
+# order:
+#   1: construct_wrapper.1:[CNode]41{[0]: ValueNode<FuncGraph> construct.27}
+#   2: construct_wrapper.1:[CNode]42{[0]: ValueNode<Primitive> Return, [1]: [CNode]41}
+
+
+# [No.2] construct.27
+# In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(94)/    def construct(self):/
+funcgraph fg_27[fg_1](
+) {
+    %1 : Tuple[Tensor(I32)*2] = DoSignaturePrimitive::S-Prim-GetNext{prim_type=1}[output_num=I64(2), shapes=[[I64(20), I64(78)], [I64(20), I64(78)]], shared_name="969ffc5c-ecb7-11ed-ac5e-0255ac1000db", types=[I32, I32]]() #scope: Default
+      # In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(95)/        outputs = self.get_next()/#outputs
+
+#------------------------> 1
+    %2 = UnpackCall::unpack_call(FuncGraph::fg_43, %1)    #(Func, Tuple[Tensor(I32)*2])    # fg_43=construct.43 #scope: Default
+      # In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(96)/        return self.network(*outputs)/#[CNode]44
+    Primitive::Return{prim_type=1}(%2)    #(Undefined) #scope: Default
+      # In file /home/ma-user/anaconda3/envs/MindSpore/lib/python3.7/site-packages/mindspore/train/dataset_helper.py(96)/        return self.network(*outputs)/#[CNode]45
+}
+# order:
+#   1: construct.27:outputs{[0]: ValueNode<DoSignaturePrimitive> S-Prim-GetNext}
+#   2: construct.27:[CNode]44{[0]: ValueNode<UnpackCall> unpack_call.46, [1]: ValueNode<FuncGraph> construct.43, [2]: outputs}
+#   3: construct.27:[CNode]45{[0]: ValueNode<Primitive> Return, [1]: [CNode]44}
+
+
+# [No.3] UnpackCall.28
+
+funcgraph fg_28(
+        %para69 : Func    # 29
+        , %para70 : Tuple[Tensor(I32)*2]    # 30
+    ) {
+    %1 : Tensor(I32)[20, 78] = Primitive::TupleGetItem{prim_type=1}(%para70, I64(0))    #(Tuple[Tensor(I32)*2], I64) #scope: Default
+#47
+    %2 : Tensor(I32)[20, 78] = Primitive::TupleGetItem{prim_type=1}(%para70, I64(1))    #(Tuple[Tensor(I32)*2], I64) #scope: Default
+#48
+
+#------------------------> 2
+    %3 = %para69(%1, %2)    #(Tensor(I32)[20, 78], Tensor(I32)[20, 78]) #scope: Default
+#49
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default
+#50
+}
+# order:
+#   1: UnpackCall.28:49{[0]: 29, [1]: 47, [2]: 48}
+#   2: UnpackCall.28:50{[0]: ValueNode<Primitive> Return, [1]: 49}
+
+
+# [No.4] construct.31
+# In file /home/ma-user/work/deep/src/util.py(155)/    def construct(self,/
+funcgraph fg_31[fg_1](
+        %para71 : Tensor(I32)[20, 78]    # Φfeatures
+        , %para72 : Tensor(I32)[20, 78]    # Φlabels
+    ) {
+    %1 : Bool = DoSignaturePrimitive::S-Prim-is_{prim_type=1}(None, None)    #(NoneType, NoneType) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]51
+    %2 : Bool = FuncGraph::fg_52(%1)    #(Bool)    # fg_52=bool_.52 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]53
+    %3 : Func = Primitive::Switch{prim_type=1}(%2, FuncGraph::fg_32, FuncGraph::fg_54)    #(Bool, Func, Func)    # fg_32=✓construct.32, fg_54=✗construct.54 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]55
+
+#------------------------> 3
+    %4 = %3() #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]56
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]57
+}
+# order:
+#   1: construct.31:Φloss{[0]: ValueNode<FuncGraph> construct.58, [1]: Φfeatures, [2]: Φlabels}
+#   2: construct.31:[CNode]51{[0]: ValueNode<DoSignaturePrimitive> S-Prim-is_, [1]: ValueNode<None> None, [2]: ValueNode<None> None}
+#   3: construct.31:[CNode]53{[0]: ValueNode<FuncGraph> bool_.52, [1]: [CNode]51}
+#   4: construct.31:[CNode]55{[0]: ValueNode<Primitive> Switch, [1]: [CNode]53, [2]: ValueNode<FuncGraph> ✓construct.32, [3]: ValueNode<FuncGraph> ✗construct.54}
+#   5: construct.31:[CNode]56{[0]: [CNode]55}
+#   6: construct.31:[CNode]57{[0]: ValueNode<Primitive> Return, [1]: [CNode]56}
+
+
+# [No.5] ✓construct.32
+# In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/
+funcgraph fg_32[fg_31](
+) {
+
+#------------------------> 4
+    %1 = FuncGraph::fg_33(%para1)    #(Ref[Tensor(F32)][])    # fg_33=↓construct.33 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]59
+    Primitive::Return{prim_type=1}(%1)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/#[CNode]60
+}
+# order:
+#   1: ✓construct.32:[CNode]59{[0]: ValueNode<FuncGraph> ↓construct.33, [1]: loss_scale}
+#   2: ✓construct.32:[CNode]60{[0]: ValueNode<Primitive> Return, [1]: [CNode]59}
+
+
+# [No.6] ↓construct.33
+# In file /home/ma-user/work/deep/src/util.py(165)/        if sens is None:/
+funcgraph fg_33[fg_31](
+        %para73 : Ref[Tensor(F32)][]    # Φscaling_sens
+    ) {
+    %1 : Bool = DoSignaturePrimitive::S-Prim-is_{prim_type=1}(None, None)    #(NoneType, NoneType) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]61
+    %2 : Bool = FuncGraph::fg_52(%1)    #(Bool)    # fg_52=bool_.52 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]62
+    %3 : Func = Primitive::Switch{prim_type=1}(%2, FuncGraph::fg_34, FuncGraph::fg_63)    #(Bool, Func, Func)    # fg_34=✓↓construct.34, fg_63=✗↓construct.63 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]64
+
+#------------------------> 5
+    %4 = %3() #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]65
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]66
+}
+# order:
+#   1: ↓construct.33:init{[0]: ValueNode<DoSignaturePrimitive> S-Prim-NPUAllocFloatStatus}
+#   2: ↓construct.33:init{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Depend, [1]: init, [2]: Φloss}
+#   3: ↓construct.33:clear_status{[0]: ValueNode<DoSignaturePrimitive> S-Prim-NPUClearFloatStatus, [1]: init}
+#   4: ↓construct.33:scaling_sens{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Depend, [1]: Φscaling_sens, [2]: clear_status}
+#   5: ↓construct.33:[CNode]67{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Cast, [1]: scaling_sens, [2]: ValueNode<Float> Float32}
+#   6: ↓construct.33:grads{[0]: ValueNode<UnpackGraphPrimitive> UnpackGraph, [1]: ValueNode<FuncGraph> construct.58, [2]: Φfeatures, [3]: Φlabels, [4]: [CNode]67}
+#   7: ↓construct.33:grads{[0]: ValueNode<DoSignaturePrimitive> S-Prim-grad, [1]: grads, [2]: [CNode]68}
+#   8: ↓construct.33:grads{[0]: grads, [1]: Φfeatures, [2]: Φlabels, [3]: [CNode]67}
+#   9: ↓construct.33:[CNode]69{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Partial, [1]: ValueNode<DoSignaturePrimitive> S-Prim-grad_scale, [2]: scaling_sens}
+#  10: ↓construct.33:grads{[0]: ValueNode<DoSignaturePrimitive> S-Prim-hyper_map, [1]: [CNode]69, [2]: grads}
+#  11: ↓construct.33:[CNode]70{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Partial, [1]: ValueNode<DoSignaturePrimitive> S-Prim-clip_grad, [2]: ValueNode<Int64Imm> 1, [3]: ValueNode<FP32Imm> 1.000000}
+#  12: ↓construct.33:Φgrads{[0]: ValueNode<DoSignaturePrimitive> S-Prim-hyper_map, [1]: [CNode]70, [2]: grads}
+#  13: ↓construct.33:init{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Depend, [1]: init, [2]: Φgrads}
+#  14: ↓construct.33:get_status{[0]: ValueNode<DoSignaturePrimitive> S-Prim-NPUGetFloatStatus, [1]: init}
+#  15: ↓construct.33:init{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Depend, [1]: init, [2]: get_status}
+#  16: ↓construct.33:[CNode]71{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: ValueNode<Int64Imm> 0}
+#  17: ↓construct.33:flag_sum{[0]: ValueNode<DoSignaturePrimitive> S-Prim-ReduceSum, [1]: init, [2]: [CNode]71}
+#  18: ↓construct.33:Φcond{[0]: ValueNode<DoSignaturePrimitive> S-Prim-LessEqual, [1]: ValueNode<Tensor> Tensor(shape=[], dtype=Float32, value=1), [2]: flag_sum}
+#  19: ↓construct.33:[CNode]61{[0]: ValueNode<DoSignaturePrimitive> S-Prim-is_, [1]: ValueNode<None> None, [2]: ValueNode<None> None}
+#  20: ↓construct.33:[CNode]62{[0]: ValueNode<FuncGraph> bool_.52, [1]: [CNode]61}
+#  21: ↓construct.33:[CNode]64{[0]: ValueNode<Primitive> Switch, [1]: [CNode]62, [2]: ValueNode<FuncGraph> ✓↓construct.34, [3]: ValueNode<FuncGraph> ✗↓construct.63}
+#  22: ↓construct.33:[CNode]65{[0]: [CNode]64}
+#  23: ↓construct.33:[CNode]66{[0]: ValueNode<Primitive> Return, [1]: [CNode]65}
+
+
+# [No.7] ✓↓construct.34
+# In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/
+funcgraph fg_34[fg_33](
+) {
+    %1 = $(↓construct.33):DoSignaturePrimitive::S-Prim-NPUAllocFloatStatus{prim_type=1}() #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(170)/        init = self.alloc_status()/#init
+
+#------------------------> 6
+    %2 = $(construct.31):FuncGraph::fg_58(%para71, %para72)    #(Tensor(I32)[20, 78], Tensor(I32)[20, 78])    # fg_58=construct.58 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(190)/        return (loss, cond)/#Φloss
+    %3 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Depend{prim_type=1}[side_effect_propagate=I64(1)](%1, %2)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(171)/        init = F.depend(init, loss)/#init
+    %4 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Partial{prim_type=1}[side_effect_propagate=I64(1)](DoSignaturePrimitive::S-Prim-clip_grad{prim_type=1}, I64(1), F32(1))    #(Undefined, Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(179)/        grads = self.hyper_map(F.partial(clip_grad, GRADIENT_CLIP_TYPE, GRADIENT_CLIP_VALUE), grads)/#[CNode]70
+    %5 = $(↓construct.33):DoSignaturePrimitive::S-Prim-NPUClearFloatStatus{prim_type=1}(%3)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(172)/        clear_status = self.clear_status(init)/#clear_status
+    %6 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Depend{prim_type=1}[side_effect_propagate=I64(1)](%para73, %5)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(173)/        scaling_sens = F.depend(scaling_sens, clear_status)/#scaling_sens
+    %7 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Partial{prim_type=1}[side_effect_propagate=I64(1)](DoSignaturePrimitive::S-Prim-grad_scale{prim_type=1}, %6)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(178)/        grads = self.hyper_map(F.partial(grad_scale, scaling_sens), grads)/#[CNode]69
+    %8 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Cast{prim_type=1}[output_names=["output"], input_names=["x", "dst_type"]](%6, F32)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(176)/                                                 self.cast(scaling_sens,/#[CNode]67
+    %9 = $(↓construct.33):UnpackGraphPrimitive::UnpackGraph{prim_type=1}(FuncGraph::fg_58, %para71, %para72, %8)    #(Undefined, Tensor(I32)[20, 78], Tensor(I32)[20, 78], Undefined)    # fg_58=construct.58 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(174)/        grads = self.grad(self.network, weights)(features,/#grads
+    %10 = $(construct.31):Primitive::MakeTuple{prim_type=1}(%para4, %para5, %para6, %para7, %para8, %para9, %para10, %para11, %para12, %para13, %para14, %para15, %para16, %para17, %para18, %para19, %para20, %para21, %para22, %para23, %para24)    #(Ref[Tensor(F32)][25, 25], Ref[Tensor(F32)][1280, 304], Ref[Tensor(F32)][1280, 304], Ref[Tensor(F32)][1280, 640], Ref[Tensor(F32)][1280, 640], Ref[Tensor(F32)][1280, 320], Ref[Tensor(F32)][1280, 320], Ref[Tensor(F32)][1280, 320], Ref[Tensor(F32)][1280, 320], Ref[Tensor(F32)][25, 640], Ref[Tensor(F32)][25], Ref[Tensor(F32)][25], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][1280], Ref[Tensor(F32)][25]) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(174)/        grads = self.grad(self.network, weights)(features,/#[CNode]68
+    %11 = $(↓construct.33):DoSignaturePrimitive::S-Prim-grad{prim_type=1}(%9, %10)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(174)/        grads = self.grad(self.network, weights)(features,/#grads
+    %12 = $(↓construct.33):%11(%para71, %para72, %8)    #(Tensor(I32)[20, 78], Tensor(I32)[20, 78], Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(174)/        grads = self.grad(self.network, weights)(features,/#grads
+    %13 = $(↓construct.33):DoSignaturePrimitive::S-Prim-hyper_map{prim_type=1}(%7, %12)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(178)/        grads = self.hyper_map(F.partial(grad_scale, scaling_sens), grads)/#grads
+    %14 = $(↓construct.33):DoSignaturePrimitive::S-Prim-hyper_map{prim_type=1}(%4, %13)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(189)/            self.optimizer(grads)/#Φgrads
+    %15 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Depend{prim_type=1}[side_effect_propagate=I64(1)](%3, %14)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(180)/        init = F.depend(init, grads)/#init
+    %16 = $(↓construct.33):DoSignaturePrimitive::S-Prim-NPUGetFloatStatus{prim_type=1}(%15)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(181)/        get_status = self.get_status(init)/#get_status
+    %17 = $(↓construct.33):DoSignaturePrimitive::S-Prim-Depend{prim_type=1}[side_effect_propagate=I64(1)](%15, %16)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(182)/        init = F.depend(init, get_status)/#init
+    %18 = $(↓construct.33):DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(I64(0))    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(183)/        flag_sum = self.reduce_sum(init, (0,))/#[CNode]71
+    %19 = $(↓construct.33):DoSignaturePrimitive::S-Prim-ReduceSum{prim_type=1}[output_names=["y"], keep_dims=Bool(0), input_names=["input_x", "axis"]](%17, %18)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(183)/        flag_sum = self.reduce_sum(init, (0,))/#flag_sum
+    %20 = $(↓construct.33):DoSignaturePrimitive::S-Prim-LessEqual{prim_type=1}[output_names=["output"], input_names=["x", "y"]](Tensor(43)[], %19)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(190)/        return (loss, cond)/#Φcond
+    %21 = FuncGraph::fg_72(%para1, %20)    #(Ref[Tensor(F32)][], Undefined)    # fg_72=construct.72 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(187)/            overflow = self.loss_scaling_manager(self.loss_scale, cond)/#overflow
+    %22 = FuncGraph::fg_73(%21)    #(Undefined)    # fg_73=↓↓construct.73 #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]74
+    Primitive::Return{prim_type=1}(%22)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend
+      # In file /home/ma-user/work/deep/src/util.py(186)/        if sens is None:/#[CNode]75
+}
+# order:
+#   1: ✓↓construct.34:overflow{[0]: ValueNode<FuncGraph> construct.72, [1]: loss_scale, [2]: Φcond}
+#   2: ✓↓construct.34:[CNode]74{[0]: ValueNode<FuncGraph> ↓↓construct.73, [1]: overflow}
+#   3: ✓↓construct.34:[CNode]75{[0]: ValueNode<Primitive> Return, [1]: [CNode]74}
+
+
+# [No.8] construct.35
+# In file /home/ma-user/work/deep/src/LSTM_CRF.py(157)/    def construct(self, inputs, labels=None):/
+funcgraph fg_35[fg_1](
+        %para74 : Tensor(I32)[20, 78]    # inputs
+        , %para75 : Tensor(I32)[20, 78]    # labels
+    ) {
+    %1 : Bool = FuncGraph::fg_76(Bool(1))    #(Bool)    # fg_76=bool_.76 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)/        if self.is_training:/#[CNode]77
+    %2 : Func = Primitive::Switch{prim_type=1}(%1, FuncGraph::fg_36, FuncGraph::fg_78)    #(Bool, Func, Func)    # fg_36=✓construct.36, fg_78=✗construct.78 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)/        if self.is_training:/#[CNode]79
+
+#------------------------> 7
+    %3 = %2() #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)/        if self.is_training:/#[CNode]80
+    Primitive::Return{prim_type=1}(%3)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)/        if self.is_training:/#[CNode]81
+}
+# order:
+#   1: construct.35:features{[0]: ValueNode<FuncGraph> construct.82, [1]: inputs}
+#   2: construct.35:features{[0]: ValueNode<FuncGraph> construct.83, [1]: features}
+#   3: construct.35:features{[0]: ValueNode<FuncGraph> construct.84, [1]: features}
+#   4: construct.35:[CNode]77{[0]: ValueNode<FuncGraph> bool_.76, [1]: ValueNode<BoolImm> true}
+#   5: construct.35:[CNode]79{[0]: ValueNode<Primitive> Switch, [1]: [CNode]77, [2]: ValueNode<FuncGraph> ✓construct.36, [3]: ValueNode<FuncGraph> ✗construct.78}
+#   6: construct.35:[CNode]80{[0]: [CNode]79}
+#   7: construct.35:[CNode]81{[0]: ValueNode<Primitive> Return, [1]: [CNode]80}
+
+
+# [No.9] ✓construct.36
+# In file /home/ma-user/work/deep/src/LSTM_CRF.py(163)/        if self.is_training:/
+funcgraph fg_36[fg_35](
+) {
+    %1 : $(construct.35):Tensor(F32)[78, 20, 25] = FuncGraph::fg_82(%para74)    #(Tensor(I32)[20, 78])    # fg_82=construct.82 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(158)/        features = self.lstm(inputs)/#features
+    %2 : $(construct.35):Tensor(F32)[78, 20, 25] = FuncGraph::fg_83(%1)    #(Tensor(F32)[78, 20, 25])    # fg_83=construct.83 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(160)/        features = self.dropout(features)/#features
+    %3 : $(construct.35):Tensor(F32)[78, 20, 25] = FuncGraph::fg_84(%2)    #(Tensor(F32)[78, 20, 25])    # fg_84=construct.84 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(161)/        features = self.layer_norm(features)/#features
+
+#------------------------> 8
+    %4 = FuncGraph::fg_37(%3)    #(Tensor(F32)[78, 20, 25])    # fg_37=_normalization_factor.37 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(165)/            total_score = self._normalization_factor(features)/#total_score
+    %5 = FuncGraph::fg_85(%3, %para75)    #(Tensor(F32)[78, 20, 25], Tensor(I32)[20, 78])    # fg_85=_realpath_score.85 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(164)/            real_score = self._realpath_score(features, labels)/#real_score
+    %6 = DoSignaturePrimitive::S-Prim-sub{prim_type=1}(%4, %5)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(166)/            loss = total_score - real_score/#loss
+    %7 = DoSignaturePrimitive::S-Prim-ReduceMean{prim_type=1}[output_names=["y"], keep_dims=Bool(0), input_names=["input_x", "axis"]](%6)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(167)/            loss = self.mean(loss)/#loss
+    Primitive::Return{prim_type=1}(%7)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(168)/            return loss/#[CNode]86
+}
+# order:
+#   1: ✓construct.36:real_score{[0]: ValueNode<FuncGraph> _realpath_score.85, [1]: features, [2]: labels}
+#   2: ✓construct.36:total_score{[0]: ValueNode<FuncGraph> _normalization_factor.37, [1]: features}
+#   3: ✓construct.36:loss{[0]: ValueNode<DoSignaturePrimitive> S-Prim-sub, [1]: total_score, [2]: real_score}
+#   4: ✓construct.36:loss{[0]: ValueNode<DoSignaturePrimitive> S-Prim-ReduceMean, [1]: loss}
+#   5: ✓construct.36:[CNode]86{[0]: ValueNode<Primitive> Return, [1]: loss}
+
+
+# [No.10] _normalization_factor.37
+# In file /home/ma-user/work/deep/src/LSTM_CRF.py(111)/    def _normalization_factor(self, features):/
+funcgraph fg_37[fg_1](
+        %para76 : Tensor(F32)[78, 20, 25]    # Φfeatures
+    ) {
+    %1 : Tensor(F32)[20, 1, 25] = DoSignaturePrimitive::S-Prim-ExpandDims{prim_type=1}[output_names=["output"], input_names=["x", "axis"]](Tensor(43)[20, 25], I64(1))    #(Tensor(F32)[20, 25], I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(116)/        forward_var = self.expand(forward_var, 1)/#forward_var
+
+#------------------------> 9
+    %2 = FuncGraph::fg_38(I64(0), %1)    #(I64, Tensor(F32)[20, 1, 25])    # fg_38=⤾_normalization_factor.38 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]87
+    Primitive::Return{prim_type=1}(%2)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]88
+}
+# order:
+#   1: _normalization_factor.37:forward_var{[0]: ValueNode<DoSignaturePrimitive> S-Prim-ExpandDims, [1]: ValueNode<Tensor> Tensor(shape=[20, 25], dtype=Float32, value=[...]), [2]: ValueNode<Int64Imm> 1}
+#   2: _normalization_factor.37:[CNode]89{[0]: ValueNode<DoSignaturePrimitive> S-Prim-make_range, [1]: ValueNode<Int64Imm> 78}
+#   3: _normalization_factor.37:[CNode]90{[0]: ValueNode<FuncGraph> ms_len.18, [1]: [CNode]89}
+#   4: _normalization_factor.37:[CNode]87{[0]: ValueNode<FuncGraph> ⤾_normalization_factor.38, [1]: ValueNode<Int64Imm> 0, [2]: forward_var}
+#   5: _normalization_factor.37:[CNode]88{[0]: ValueNode<Primitive> Return, [1]: [CNode]87}
+
+
+# [No.11] ⤾_normalization_factor.38
+# In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/
+funcgraph fg_38[fg_37](
+        %para77 : I64    # @[CNode]39
+        , %para78 : Tensor(F32)[20, 1, 25]    # Φforward_var
+    ) {
+    %1 : $(_normalization_factor.37):Tuple[I64*78] = DoSignaturePrimitive::S-Prim-make_range{prim_type=1}(I64(78))    #(I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]89
+    %2 : $(_normalization_factor.37):I64 = FuncGraph::fg_18(%1)    #(Tuple[I64*78])    # fg_18=ms_len.18 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]90
+    %3 : Bool = MultitypeFuncGraph::less{(Tensor, Number), (Number, Tensor), (Tensor, Tensor), (Number, Number)}(%para77, %2)    #(I64, I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]91
+    %4 : Func = Primitive::Switch{prim_type=1}(%3, FuncGraph::fg_40, FuncGraph::fg_92)    #(Bool, Func, Func)    # fg_40=⥁_normalization_factor.40, fg_92=↓_normalization_factor.92 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]93
+
+#------------------------> 10
+    %5 = %4() #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]94
+    Primitive::Return{prim_type=1}(%5)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]95
+}
+# order:
+#   1: ⤾_normalization_factor.38:[CNode]91{[0]: ValueNode<MultitypeFuncGraph> less.7, [1]: @[CNode]39, [2]: [CNode]90}
+#   2: ⤾_normalization_factor.38:[CNode]93{[0]: ValueNode<Primitive> Switch, [1]: [CNode]91, [2]: ValueNode<FuncGraph> ⥁_normalization_factor.40, [3]: ValueNode<FuncGraph> ↓_normalization_factor.92}
+#   3: ⤾_normalization_factor.38:[CNode]94{[0]: [CNode]93}
+#   4: ⤾_normalization_factor.38:[CNode]95{[0]: ValueNode<Primitive> Return, [1]: [CNode]94}
+
+
+# [No.12] ⥁_normalization_factor.40
+# In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/
+funcgraph fg_40[fg_38](
+) {
+    %1 : I64 = MultitypeFuncGraph::add{(RowTensor, Tensor), (NoneType, NoneType), (Tensor, Tensor), (List, List), (Tuple, Tuple), (Tensor, List), (Tensor, Tuple), (List, Tensor), (Tuple, Tensor), (Tensor, Number), (Number, Tensor), (String, String), (Number, Number)}(%para77, I64(1))    #(I64, I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]39
+    %2 : Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone] = DoSignaturePrimitive::S-Prim-make_slice{prim_type=1}(None, None, None)    #(NoneType, NoneType, NoneType) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#[CNode]96
+    %3 : $(_normalization_factor.37):Tuple[I64*78] = DoSignaturePrimitive::S-Prim-make_range{prim_type=1}(I64(78))    #(I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]89
+    %4 : I64 = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%3, %para77)    #(Tuple[I64*78], I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#idx
+    %5 : I64 = DoSignaturePrimitive::S-Prim-add{prim_type=1}(%4, I64(1))    #(I64, I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#[CNode]97
+    %6 : Slice[Int64 : Int64 : kMetaTypeNone] = DoSignaturePrimitive::S-Prim-make_slice{prim_type=1}(%4, %5, None)    #(I64, I64, NoneType) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#[CNode]98
+    %7 : Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone] = DoSignaturePrimitive::S-Prim-make_slice{prim_type=1}(None, None, None)    #(NoneType, NoneType, NoneType) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#[CNode]99
+    %8 : Tuple[Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone],Slice[Int64 : Int64 : kMetaTypeNone],Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone]] = DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(%2, %6, %7)    #(Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone], Slice[Int64 : Int64 : kMetaTypeNone], Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone]) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#[CNode]100
+    %9 : Tensor(F32)[78, 1, 25] = DoSignaturePrimitive::S-Prim-getitem{prim_type=1}(%para76, %8)    #(Tensor(F32)[78, 20, 25], Tuple[Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone],Slice[Int64 : Int64 : kMetaTypeNone],Slice[kMetaTypeNone : kMetaTypeNone : kMetaTypeNone]]) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(118)/            feat = features[:, idx:(idx+1), :]/#feat
+    %10 : Tuple[I64,NoneType,I64] = DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(I64(20), None, I64(1))    #(I64, NoneType, I64) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(119)/            emit_score = self.reshape(feat, (self.batch_size, self.num_tags, 1))/#[CNode]101
+
+#------------------------> 11
+    %11 = DoSignaturePrimitive::S-Prim-Reshape{prim_type=1}[output_names=["output"], input_names=["tensor", "shape"]](%9, %10)    #(Tensor(F32)[78, 1, 25], Tuple[I64,NoneType,I64]) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(119)/            emit_score = self.reshape(feat, (self.batch_size, self.num_tags, 1))/#emit_score
+    %12 = DoSignaturePrimitive::S-Prim-add{prim_type=1}(%11, %para4)    #(Undefined, Ref[Tensor(F32)][25, 25]) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(120)/            next_tag_var = emit_score + self.transitions + forward_var/#[CNode]102
+    %13 = DoSignaturePrimitive::S-Prim-add{prim_type=1}(%12, %para78)    #(Undefined, Tensor(F32)[20, 1, 25]) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(120)/            next_tag_var = emit_score + self.transitions + forward_var/#next_tag_var
+    %14 = FuncGraph::fg_103(%13)    #(Undefined)    # fg_103=log_sum_exp.103 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(121)/            forward_var = self.log_sum_exp(next_tag_var)/#forward_var
+    %15 = DoSignaturePrimitive::S-Prim-MakeTuple{prim_type=1}(I64(20), I64(1), I64(25))    #(Undefined, Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(122)/            forward_var = self.reshape(forward_var, (self.batch_size, 1, self.out_size))/#[CNode]104
+    %16 = DoSignaturePrimitive::S-Prim-Reshape{prim_type=1}[output_names=["output"], input_names=["tensor", "shape"]](%14, %15)    #(Undefined, Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(122)/            forward_var = self.reshape(forward_var, (self.batch_size, 1, self.out_size))/#forward_var
+    %17 = FuncGraph::fg_38(%1, %16)    #(I64, Undefined)    # fg_38=⤾_normalization_factor.38 #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]105
+    Primitive::Return{prim_type=1}(%17)    #(Undefined) #scope: Default/network-Lstm_CRF_Cell_Ascend/network-Lstm_CRF
+      # In file /home/ma-user/work/deep/src/LSTM_CRF.py(117)/        for idx in range(self.seq_length):/#[CNode]106
+}
+# order:
+#   1: ⥁_normalization_factor.40:idx{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: [CNode]89, [2]: @[CNode]39}
+#   2: ⥁_normalization_factor.40:[CNode]39{[0]: ValueNode<MultitypeFuncGraph> add.3, [1]: @[CNode]39, [2]: ValueNode<Int64Imm> 1}
+#   3: ⥁_normalization_factor.40:[CNode]96{[0]: ValueNode<DoSignaturePrimitive> S-Prim-make_slice, [1]: ValueNode<None> None, [2]: ValueNode<None> None, [3]: ValueNode<None> None}
+#   4: ⥁_normalization_factor.40:[CNode]97{[0]: ValueNode<DoSignaturePrimitive> S-Prim-add, [1]: idx, [2]: ValueNode<Int64Imm> 1}
+#   5: ⥁_normalization_factor.40:[CNode]98{[0]: ValueNode<DoSignaturePrimitive> S-Prim-make_slice, [1]: idx, [2]: [CNode]97, [3]: ValueNode<None> None}
+#   6: ⥁_normalization_factor.40:[CNode]99{[0]: ValueNode<DoSignaturePrimitive> S-Prim-make_slice, [1]: ValueNode<None> None, [2]: ValueNode<None> None, [3]: ValueNode<None> None}
+#   7: ⥁_normalization_factor.40:[CNode]100{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: [CNode]96, [2]: [CNode]98, [3]: [CNode]99}
+#   8: ⥁_normalization_factor.40:feat{[0]: ValueNode<DoSignaturePrimitive> S-Prim-getitem, [1]: Φfeatures, [2]: [CNode]100}
+#   9: ⥁_normalization_factor.40:[CNode]101{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: ValueNode<Int64Imm> 20, [2]: ValueNode<None> None, [3]: ValueNode<Int64Imm> 1}
+#  10: ⥁_normalization_factor.40:emit_score{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Reshape, [1]: feat, [2]: [CNode]101}
+#  11: ⥁_normalization_factor.40:[CNode]102{[0]: ValueNode<DoSignaturePrimitive> S-Prim-add, [1]: emit_score, [2]: transitions}
+#  12: ⥁_normalization_factor.40:next_tag_var{[0]: ValueNode<DoSignaturePrimitive> S-Prim-add, [1]: [CNode]102, [2]: Φforward_var}
+#  13: ⥁_normalization_factor.40:forward_var{[0]: ValueNode<FuncGraph> log_sum_exp.103, [1]: next_tag_var}
+#  14: ⥁_normalization_factor.40:[CNode]104{[0]: ValueNode<DoSignaturePrimitive> S-Prim-MakeTuple, [1]: ValueNode<Int64Imm> 20, [2]: ValueNode<Int64Imm> 1, [3]: ValueNode<Int64Imm> 25}
+#  15: ⥁_normalization_factor.40:forward_var{[0]: ValueNode<DoSignaturePrimitive> S-Prim-Reshape, [1]: forward_var, [2]: [CNode]104}
+#  16: ⥁_normalization_factor.40:[CNode]105{[0]: ValueNode<FuncGraph> ⤾_normalization_factor.38, [1]: [CNode]39, [2]: forward_var}
+#  17: ⥁_normalization_factor.40:[CNode]106{[0]: ValueNode<Primitive> Return, [1]: [CNode]105}
+
+
+#===============================================================================
+# num of function graphs in stack: 12/13 (Ignored 1 internal frames).

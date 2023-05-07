@@ -1,0 +1,32 @@
+{
+    "KBHit":false,
+    "binFileName":"dynamic_rnn_7089618866930302273_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"dynamic_rnn_7089618866930302273_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "sha256":"de50ecee2ab7f0d76b3bc08fb79c7bb2319e27fd3c4f3bdf22d8ba973199997d",
+    "workspace":{
+        "num":1,
+        "size":[
+            1024
+        ]
+    }
+}

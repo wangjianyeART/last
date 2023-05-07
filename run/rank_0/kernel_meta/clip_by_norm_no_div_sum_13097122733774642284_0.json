@@ -1,0 +1,18 @@
+{
+    "KBHit":false,
+    "batchBindOnly":1,
+    "binFileName":"clip_by_norm_no_div_sum_13097122733774642284_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"clip_by_norm_no_div_sum_13097122733774642284_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "sha256":"419cea79579d2e0f50fdf635d359cf3a99cb4a0851977597d2481eadc4f77187"
+}

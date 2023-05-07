@@ -1,0 +1,16 @@
+{
+    "KBHit":false,
+    "batchBindOnly":1,
+    "binFileName":"logical_and_11583121866679098814_0",
+    "binFileSuffix":".o",
+    "blockDim":1,
+    "kernelName":"logical_and_11583121866679098814_0__kernel0",
+    "magic":"RT_DEV_BINARY_MAGIC_ELF",
+    "opParaSize":0,
+    "parameters":[
+        0,
+        0,
+        0
+    ],
+    "sha256":"c94de8944a3787bd5059e203fe96f0a23bb394c4719f86e1947082a4c05e672c"
+}
